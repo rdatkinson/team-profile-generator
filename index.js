@@ -94,7 +94,26 @@ function mainMenu() {
 
     function addIntern() {
         inquirer.prompt([
-            // adding prompts later
+            {
+                type: 'input',
+                name: 'name',
+                message: "What is the intern's name?"
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: "What is the intern's ID?"
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: "What is the intern's email?"
+            },
+            {
+                type: 'input',
+                name: 'school',
+                message: "What school does the intern attend?"
+            }
         ]).then(answers => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
             teamMembers.push(intern);
