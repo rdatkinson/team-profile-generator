@@ -53,4 +53,14 @@ function mainMenu() {
             createTeam();
         });
     }
+
+    function addIntern() {
+        inquirer.prompt([
+            // adding prompts later
+        ]).then(answers => {
+            const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+            teamMembers.push(intern);
+            createTeam();
+        });
+    }
 }
