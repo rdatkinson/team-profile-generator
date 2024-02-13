@@ -43,4 +43,14 @@ function mainMenu() {
             }
         });
     }
+
+    function addEngineer() {
+        inquirer.prompt([
+            // adding prompts later
+        ]).then(answers => {
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            teamMembers.push(engineer);
+            createTeam();
+        });
+    }
 }
