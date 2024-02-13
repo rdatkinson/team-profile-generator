@@ -26,4 +26,21 @@ function mainMenu() {
             createTeam();
         });
     }
+
+    function createTeam() {
+        inquirer.prompt([
+            // adding prompts later
+        ]).then(selection => {
+            switch (selection.teamChoice) {
+                case 'Add Engineer':
+                    addEngineer();
+                    break;
+                case 'Add Intern':
+                    addIntern();
+                    break;
+                default:
+                    buildTeam();
+            }
+        });
+    }
 }
