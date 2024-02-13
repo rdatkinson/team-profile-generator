@@ -63,4 +63,12 @@ function mainMenu() {
             createTeam();
         });
     }
+
+    function buildTeam() {
+        if (!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR);
+        }
+        fs.writeFileSync(outputPath, render(teamMembers), 'utf-8');
+        console.log('Team built successfully! Check the output directory for the team.html file.');
+    }
 }
