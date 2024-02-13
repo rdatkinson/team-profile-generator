@@ -48,7 +48,16 @@ function mainMenu() {
 
     function createTeam() {
         inquirer.prompt([
-            // adding prompts later
+            {
+                type: 'list',
+                name: 'teamChoice',
+                message: 'What would you like to do next?',
+                choices: [
+                    'Add an Engineer',
+                    'Add an Intern',
+                    'Finish building my team'
+                ]
+            }
         ]).then(selection => {
             switch (selection.teamChoice) {
                 case 'Add Engineer':
