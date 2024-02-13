@@ -19,7 +19,26 @@ function mainMenu() {
     function createManager() {
         console.log('Please build your team');
         inquirer.prompt([
-            // adding prompts later
+            {
+                type: 'input',
+                name: 'name',
+                message: "What is the team manager's name?"
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: "What is the team manager's employee ID?"
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: "What is the team manager's email address?"
+            },
+            {
+                type: 'input',
+                name: 'officeNumber',
+                message: "What is the team manager's office number?"
+            }
         ]).then(answers => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
             teamMembers.push(manager);
@@ -71,4 +90,8 @@ function mainMenu() {
         fs.writeFileSync(outputPath, render(teamMembers), 'utf-8');
         console.log('Team built successfully! Check the output directory for the team.html file.');
     }
+
+    createManager();
 }
+
+mainMenu();
