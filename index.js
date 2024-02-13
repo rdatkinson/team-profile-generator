@@ -65,7 +65,26 @@ function mainMenu() {
 
     function addEngineer() {
         inquirer.prompt([
-            // adding prompts later
+            {
+                type: 'input',
+                name: 'name',
+                message: "What is the engineer's name?"
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: "What is the engineer's ID?"
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: "What is the engineer's email?"
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: "What is the engineer's GitHub username?"
+            }
         ]).then(answers => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             teamMembers.push(engineer);
