@@ -13,3 +13,17 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
+const teamMembers = [];
+
+function mainMenu() {
+    function createManager() {
+        console.log('Please build your team');
+        inquirer.prompt([
+            // adding prompts later
+        ]).then(answers => {
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+            teamMembers.push(manager);
+            createTeam();
+        });
+    }
+}
