@@ -22,6 +22,7 @@ Complete team
 ![alt text](assets/images/finish.png)
 
 After the user selects "Finish building my team", an output folder, with an html folder inside, will be automatically generated, as in the screenshot below:
+
 ![alt text](assets/images/html1.png)
 
 For demonstration purposes, I have included my own Beatles themed team within this project, please see the screenshots below for the HTML file that was automatically created and how it would look on the browser, with some basic styling added:
